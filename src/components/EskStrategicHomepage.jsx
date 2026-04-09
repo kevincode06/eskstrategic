@@ -174,7 +174,7 @@ export default function EskStrategicHomepage() {
           namePlaceholder: "Votre nom",
           emailPlaceholder: "Adresse e-mail",
           companyPlaceholder: "Entreprise",
-          needsPlaceholder: "Parlez-nous un peu de vos besoins",
+          needsPlaceholder: "Tapez votre message ici...",
           locationValue: "Johannesburg, Afrique du Sud",
         },
         footer: "Créer de la valeur grâce à l'excellence stratégique",
