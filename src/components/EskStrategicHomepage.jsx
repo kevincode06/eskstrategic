@@ -128,7 +128,7 @@ export default function EskStrategicHomepage() {
           eyebrow: "À propos",
           title: "Un partenaire de confiance pour la transformation des entreprises",
           p1: "Chez ESK Strategic Solutions, nous accompagnons les organisations avec des solutions métier et technologiques concrètes et tournées vers l'avenir. Notre approche repose sur une vision stratégique, l'excellence opérationnelle et un engagement constant à aider nos clients à se moderniser, à s'optimiser et à se développer.",
-          p2: "Nous pensons que de bonnes solutions ne doivent pas seulement être séduisantes sur le papier — elles doivent résoudre de vrais problèmes, améliorer les performances et créer une valeur durable.",
+          p2: "Nous pensons que de bonnes solutions ne doivent pas seulement être séduisantes sur le papier mais elles doivent résoudre de vrais problèmes, améliorer les performances et créer une valeur durable.",
           missionTitle: "Mission",
           mission: "Fournir des solutions innovantes et stratégiques qui créent une valeur durable pour nos clients.",
           visionTitle: "Vision",
@@ -160,7 +160,7 @@ export default function EskStrategicHomepage() {
         why: {
           eyebrow: "Pourquoi choisir ESK",
           title: "Un partenaire premium, pragmatique et axé sur les résultats",
-          body: "Nous livrons des solutions alignées sur la réalité de l'entreprise — pas seulement des idées, mais une exécution qui améliore l'efficacité, soutient la croissance et crée une valeur mesurable.",
+          body: "Nous livrons des solutions alignées sur la réalité de l'entreprise, pas seulement des idées, mais une exécution qui améliore l'efficacité, soutient la croissance et crée une valeur mesurable.",
         },
         contact: {
           eyebrow: "Contact",
