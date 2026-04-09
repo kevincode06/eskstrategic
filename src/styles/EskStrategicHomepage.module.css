@@ -1,4 +1,4 @@
-/* ─── Base Layout ─────────────────────────────────────────────────────────── */
+
 .page {
   min-height: 100vh;
   background-color: #041924;
@@ -6,7 +6,7 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
-/* ─── Header ──────────────────────────────────────────────────────────────── */
+/*  Header */
 .header {
   position: sticky;
   top: 0;
@@ -25,26 +25,14 @@
   padding: 16px 24px;
 }
 
-/* ─── Logo ────────────────────────────────────────────────────────────────── */
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+/* Logo  */
+.logoImg {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
-.logoIcon {
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 14px;
-  border: 1px solid rgba(212, 175, 55, 0.4);
-  background-color: rgba(212, 175, 55, 0.1);
-  font-size: 18px;
-  font-weight: 700;
-  color: #f1d57a;
-}
 
 .logoName {
   font-size: 18px;
@@ -62,7 +50,7 @@
   margin: 0;
 }
 
-/* ─── Navigation ──────────────────────────────────────────────────────────── */
+/*Navigation */
 .nav {
   display: flex;
   align-items: center;
@@ -80,7 +68,7 @@
   color: #f3d98b;
 }
 
-/* ─── Language Toggle ─────────────────────────────────────────────────────── */
+/*  Language Toggle */
 .headerActions {
   display: flex;
   align-items: center;
@@ -118,7 +106,7 @@
   color: #041924;
 }
 
-/* ─── Buttons ─────────────────────────────────────────────────────────────── */
+/*  Buttons */
 .btnPrimary {
   display: inline-flex;
   align-items: center;
@@ -159,7 +147,7 @@
   color: #f3d98b;
 }
 
-/* ─── Hero Section ────────────────────────────────────────────────────────── */
+/* Hero Section */
 .hero {
   position: relative;
   overflow: hidden;
@@ -225,7 +213,7 @@
   margin-bottom: 40px;
 }
 
-/* ─── Hero Highlights ─────────────────────────────────────────────────────── */
+/*  Hero Highlights  */
 .highlightsGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -257,7 +245,7 @@
   margin: 0;
 }
 
-/* ─── Shared Section Styles ───────────────────────────────────────────────── */
+/* Shared Section Styles  */
 .sectionInner {
   max-width: 1280px;
   margin: 0 auto;
@@ -289,7 +277,7 @@
   margin: 0;
 }
 
-/* ─── About Section ───────────────────────────────────────────────────────── */
+/* About Section */
 .about {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   background-color: #062231;
@@ -338,7 +326,7 @@
   line-height: 1.7;
 }
 
-/* ─── Services Section ────────────────────────────────────────────────────── */
+/* Services Section  */
 .services {
   max-width: 1280px;
   margin: 0 auto;
@@ -396,7 +384,7 @@
   margin: 0;
 }
 
-/* ─── Process Section ─────────────────────────────────────────────────────── */
+/*  Process Section  */
 .process {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -437,7 +425,7 @@
   margin: 0;
 }
 
-/* ─── Why ESK Section ─────────────────────────────────────────────────────── */
+/*  Why ESK Section  */
 .whySection {
   max-width: 1280px;
   margin: 0 auto;
@@ -459,7 +447,7 @@
   max-width: 680px;
 }
 
-/* ─── Contact Section ─────────────────────────────────────────────────────── */
+/*  Contact Section */
 .contact {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   background-color: #03141d;
@@ -500,7 +488,7 @@
   margin: 0;
 }
 
-/* ─── Contact Form ────────────────────────────────────────────────────────── */
+/*  Contact Form  */
 .formOuter {
   border-radius: 32px;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -548,7 +536,7 @@
   border-color: #d4af37;
 }
 
-/* ─── Footer ──────────────────────────────────────────────────────────────── */
+/*  Footer  */
 .footer {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   background-color: #031018;
@@ -565,7 +553,7 @@
   color: rgba(255, 255, 255, 0.55);
 }
 
-/* ─── Responsive ──────────────────────────────────────────────────────────── */
+/*  Responsive  */
 @media (max-width: 768px) {
   .nav { display: none; }
   .langToggle { display: none; }

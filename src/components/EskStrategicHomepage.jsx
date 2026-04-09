@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import styles from "../styles/EskStrategicHomepage.module.css";
+import logo from "../assets/logo.png";
 
 export default function EskStrategicHomepage() {
 
@@ -11,7 +12,7 @@ export default function EskStrategicHomepage() {
   const copy = useMemo(
     () => ({
 
-      //  English 
+      // English 
       en: {
         brandTag: "Strategic Excellence",
         nav: {
@@ -189,18 +190,13 @@ export default function EskStrategicHomepage() {
   return (
     <div className={styles.page}>
 
-      {/* ── Header ── */}
+      {/* Header */}
       <header className={styles.header}>
         <div className={styles.headerInner}>
 
-          {/* Logo */}
-          <div className={styles.logo}>
-            <div className={styles.logoIcon}>E</div>
-            <div>
-              <p className={styles.logoName}>ESK Strategic Solutions</p>
-              <p className={styles.logoTag}>{t.brandTag}</p>
-            </div>
-          </div>
+      <div className={styles.logo}>
+  <img src={logo} alt="ESK Strategic Solutions" className={styles.logoImg} />
+</div>
 
           {/* Desktop Nav */}
           <nav className={styles.nav}>
@@ -235,7 +231,7 @@ export default function EskStrategicHomepage() {
 
       <main>
 
-        {/* ── Hero Section ── */}
+        {/*  Hero Section */}
         <section id="home" className={styles.hero}>
           <div className={styles.heroBg} />
           <div className={styles.heroInner}>
@@ -259,7 +255,7 @@ export default function EskStrategicHomepage() {
           </div>
         </section>
 
-        {/* ── About Section ── */}
+        {/* About Section */}
         <section id="about" className={styles.about}>
           <div className={styles.aboutGrid}>
             <div className={styles.aboutText}>
@@ -281,7 +277,7 @@ export default function EskStrategicHomepage() {
           </div>
         </section>
 
-        {/* ── Services Section ── */}
+        {/* Services Section */}
         <section id="services" className={styles.services}>
           <div className={styles.servicesIntro}>
             <p className={styles.eyebrow}>{t.services.eyebrow}</p>
@@ -299,7 +295,7 @@ export default function EskStrategicHomepage() {
           </div>
         </section>
 
-        {/* ── Process Section ── */}
+        {/*  Process Section  */}
         <section id="process" className={styles.process}>
           <div className={styles.sectionInner}>
             <p className={styles.eyebrow}>{t.process.eyebrow}</p>
@@ -316,7 +312,7 @@ export default function EskStrategicHomepage() {
           </div>
         </section>
 
-        {/* ── Why ESK Section ── */}
+        {/*  Why ESK Section  */}
         <section className={styles.whySection}>
           <div className={styles.whyBox}>
             <div className={styles.whyContent}>
@@ -328,7 +324,7 @@ export default function EskStrategicHomepage() {
           </div>
         </section>
 
-        {/* ── Contact Section ── */}
+        {/* Contact Section */}
         <section id="contact" className={styles.contact}>
           <div className={styles.contactGrid}>
 
@@ -376,7 +372,7 @@ export default function EskStrategicHomepage() {
 
       </main>
 
-      {/* ── Footer ── */}
+      {/*  Footer  */}
       <footer className={styles.footer}>
         <div className={styles.footerInner}>
           <p>© 2026 ESK Strategic Solutions. All rights reserved.</p>
