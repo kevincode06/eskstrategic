@@ -44,7 +44,7 @@ export default function EskStrategicHomepage() {
           eyebrow: "About Us",
           title: "A trusted partner for business transformation",
           p1: "At ESK Strategic Solutions, we partner with organisations to deliver practical, forward-thinking business and technology solutions. Our work is grounded in strategic insight, operational excellence, and a commitment to helping clients modernise, optimise, and grow.",
-          p2: "We believe strong solutions should not only look good on paper — they should solve real problems, improve performance, and create sustainable value.",
+          p2: "We believe strong solutions should not only look good on paper but they should solve real problems, improve performance, and create sustainable value.",
           missionTitle: "Mission",
           mission: "To deliver innovative and strategic solutions that create sustainable value for our clients.",
           visionTitle: "Vision",
@@ -76,7 +76,7 @@ export default function EskStrategicHomepage() {
         why: {
           eyebrow: "Why Choose ESK",
           title: "A premium, practical, and results-focused partner",
-          body: "We focus on delivering solutions that are aligned to business reality — not just ideas, but execution that improves efficiency, supports growth, and creates measurable value.",
+          body: "We focus on delivering solutions that are aligned to business reality, not just ideas, but execution that improves efficiency, supports growth, and creates measurable value.",
         },
         contact: {
           eyebrow: "Contact Us",
@@ -90,7 +90,7 @@ export default function EskStrategicHomepage() {
           namePlaceholder: "Your Name",
           emailPlaceholder: "Email Address",
           companyPlaceholder: "Company",
-          needsPlaceholder: "Tell us a bit about your needs",
+          needsPlaceholder: "Type your message in here...",
           locationValue: "Johannesburg, South Africa",
         },
         footer: "Adding value through strategic excellence",
