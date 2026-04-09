@@ -553,20 +553,60 @@
   color: rgba(255, 255, 255, 0.55);
 }
 
-/*  Responsive  */
+/* Responsive */
 @media (max-width: 768px) {
-  .nav { display: none; }
-  .langToggle { display: none; }
-  .aboutGrid { grid-template-columns: 1fr; }
-  .servicesGrid { grid-template-columns: 1fr; }
-  .processGrid { grid-template-columns: repeat(2, 1fr); }
-  .contactGrid { grid-template-columns: 1fr; }
-  .highlightsGrid { grid-template-columns: 1fr; }
-  .whyBox { flex-direction: column; }
-  .footerInner { flex-direction: column; gap: 16px; text-align: center; }
+  .nav {
+    display: none;
+  }
+
+  .langToggle {
+    display: flex;
+    width: fit-content;
+    padding: 3px;
+  }
+
+  .langBtn {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+
+  .aboutGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .processGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .highlightsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .whyBox {
+    flex-direction: column;
+  }
+
+  .footerInner {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
 }
 
 @media (max-width: 480px) {
-  .processGrid { grid-template-columns: 1fr; }
-  .contactInfoGrid { grid-template-columns: 1fr; }
+  .processGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .contactInfoGrid {
+    grid-template-columns: 1fr;
+  }
 }
