@@ -198,13 +198,13 @@
 }
 
 .heroTitle {
-  font-size: clamp(36px, 5vw, 58px);
+  font-size: clamp(26px, 3vw, 44px);
   font-weight: 900;
-  line-height: 1.15;
+  line-height: 1.2;
   letter-spacing: -0.02em;
   color: #ffffff;
   max-width: 680px;
-  margin: 0 0 24px;
+  margin: 0 0 20px;
 }
 
 .heroBody {
@@ -701,5 +701,19 @@
   /* Fix process step number size on mobile */
   .processStep {
     font-size: 32px;
+  }
+}
+/*  Fix long French title on smaller screens  */
+@media (max-width: 1024px) {
+  .heroTitle {
+    font-size: clamp(28px, 4vw, 48px);
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: clamp(24px, 6vw, 36px);
+    line-height: 1.25;
   }
 }
