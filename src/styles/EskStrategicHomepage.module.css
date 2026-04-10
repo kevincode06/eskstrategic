@@ -15,6 +15,15 @@
   background-color: rgba(4, 25, 36, 0.9);
   backdrop-filter: blur(10px);
 }
+/* Fix anchor scroll offset for sticky header */
+.hero,
+.about,
+.services,
+.process,
+.whySection,
+.contact {
+  scroll-margin-top: 100px;
+}
 
 .headerInner {
   max-width: 1280px;
@@ -608,5 +617,89 @@
 
   .contactInfoGrid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ── MOBILE FIXES ── */
+@media (max-width: 768px) {
+
+  /* Fix logo size on mobile */
+  .logoImg {
+    height: 60px;
+  }
+
+  /* Fix header padding on mobile */
+  .headerInner {
+    padding: 12px 16px;
+  }
+
+  /* Ensure badge is visible on mobile */
+  .heroBadge {
+    font-size: 9px;
+    padding: 6px 12px;
+    letter-spacing: 0.15em;
+    margin-bottom: 16px;
+    display: inline-flex;
+  }
+
+  /* Fix hero padding on mobile */
+  .heroInner {
+    padding: 48px 16px;
+  }
+
+  /* Fix hero title on mobile */
+  .heroTitle {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+
+  /* Fix hero body on mobile */
+  .heroBody {
+    font-size: 15px;
+  }
+
+  /* Fix section inner padding on mobile */
+  .sectionInner {
+    padding: 48px 16px;
+  }
+
+  /* Fix about grid padding on mobile */
+  .aboutGrid {
+    padding: 48px 16px;
+  }
+
+  /* Fix services padding on mobile */
+  .services {
+    padding: 48px 16px;
+  }
+
+  /* Fix why box padding on mobile */
+  .whyBox {
+    padding: 28px 20px;
+  }
+
+  /* Fix why section padding on mobile */
+  .whySection {
+    padding: 48px 16px;
+  }
+
+  /* Fix contact grid padding on mobile */
+  .contactGrid {
+    padding: 48px 16px;
+  }
+
+  /* Fix section title on mobile */
+  .sectionTitle {
+    font-size: 26px;
+  }
+
+  /* Fix process grid cards on mobile */
+  .processCard {
+    padding: 20px;
+  }
+
+  /* Fix process step number size on mobile */
+  .processStep {
+    font-size: 32px;
   }
 }

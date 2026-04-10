@@ -3,16 +3,14 @@ import styles from "../styles/EskStrategicHomepage.module.css";
 import logo from "../assets/logo.png";
 
 export default function EskStrategicHomepage() {
-
-  // Language State 
+  // Language State
   // "en" = English, "fr" = French
   const [language, setLanguage] = useState("en");
 
-  // Translations 
+  // Translations
   const copy = useMemo(
     () => ({
-
-      // English 
+      // English
       en: {
         brandTag: "Strategic Excellence",
         nav: {
@@ -31,7 +29,8 @@ export default function EskStrategicHomepage() {
         },
         hero: {
           badge: "Adding value through strategic excellence",
-          title: "Strategic Solutions for Growth, Innovation, and Digital Excellence",
+          title:
+            "Strategic Solutions for Growth, Innovation, and Digital Excellence",
           body: "We help businesses transform, optimise, and scale through strategic advisory, custom software development, managed IT services, and cloud solutions.",
           highlights: [
             "Tailored business and technology solutions",
@@ -46,31 +45,84 @@ export default function EskStrategicHomepage() {
           p1: "At ESK Strategic Solutions, we partner with organisations to deliver practical, forward-thinking business and technology solutions. Our work is grounded in strategic insight, operational excellence, and a commitment to helping clients modernise, optimise, and grow.",
           p2: "We believe strong solutions should not only look good on paper but they should solve real problems, improve performance, and create sustainable value.",
           missionTitle: "Mission",
-          mission: "To deliver innovative and strategic solutions that create sustainable value for our clients.",
+          mission:
+            "To deliver innovative and strategic solutions that create sustainable value for our clients.",
           visionTitle: "Vision",
-          vision: "To be a trusted partner in business transformation and digital excellence across Africa and beyond.",
+          vision:
+            "To be a trusted partner in business transformation and digital excellence across Africa and beyond.",
         },
         services: {
           eyebrow: "Our Services",
           title: "Solutions designed to move your business forward",
-          intro: "We combine strategic consulting and digital capability to help organisations improve operations, strengthen technology foundations, and unlock new growth opportunities.",
+          intro:
+            "We combine strategic consulting and digital capability to help organisations improve operations, strengthen technology foundations, and unlock new growth opportunities.",
           items: [
-            { title: "Strategic & Operational Consulting", description: "Digital strategy, business optimisation, innovation planning, and tailored advisory services to help organisations grow and remain competitive.", icon: "◈" },
-            { title: "Custom Software Development", description: "Tailored web and mobile applications that solve business problems, improve workflows, and enhance customer experiences.", icon: "⌘" },
-            { title: "Managed IT Services", description: "Reliable infrastructure support, managed digital services, procurement guidance, and continuous operational assistance.", icon: "▣" },
-            { title: "Automation & Optimisation", description: "Process automation, workflow improvement, and performance enhancement to reduce inefficiencies and increase value.", icon: "↗" },
-            { title: "Cloud Strategy", description: "Cloud migration, infrastructure planning, security best practices, and cost optimisation for scalable digital growth.", icon: "☁" },
-            { title: "IT Infrastructure Solutions", description: "Strong technology foundations through infrastructure design, system support, and managed digital environments.", icon: "⬡" },
+            {
+              title: "Strategic & Operational Consulting",
+              description:
+                "Digital strategy, business optimisation, innovation planning, and tailored advisory services to help organisations grow and remain competitive.",
+              icon: "◈",
+            },
+            {
+              title: "Custom Software Development",
+              description:
+                "Tailored web and mobile applications that solve business problems, improve workflows, and enhance customer experiences.",
+              icon: "",
+            },
+            {
+              title: "Managed IT Services",
+              description:
+                "Reliable infrastructure support, managed digital services, procurement guidance, and continuous operational assistance.",
+              icon: "▣",
+            },
+            {
+              title: "Automation & Optimisation",
+              description:
+                "Process automation, workflow improvement, and performance enhancement to reduce inefficiencies and increase value.",
+              icon: "↗",
+            },
+            {
+              title: "Cloud Strategy",
+              description:
+                "Cloud migration, infrastructure planning, security best practices, and cost optimisation for scalable digital growth.",
+              icon: "☁",
+            },
+            {
+              title: "IT Infrastructure Solutions",
+              description:
+                "Strong technology foundations through infrastructure design, system support, and managed digital environments.",
+              icon: "⬡",
+            },
           ],
         },
         process: {
           eyebrow: "Our Process",
           title: "How we work with clients",
           items: [
-            { step: "01", title: "Discover", description: "We learn about your business, goals, pain points, and opportunities." },
-            { step: "02", title: "Strategise", description: "We define the right roadmap and solution approach for measurable impact." },
-            { step: "03", title: "Deliver", description: "We implement high-quality solutions aligned with your objectives." },
-            { step: "04", title: "Optimise", description: "We refine, support, and improve to sustain long-term value." },
+            {
+              step: "01",
+              title: "Discover",
+              description:
+                "We learn about your business, goals, pain points, and opportunities.",
+            },
+            {
+              step: "02",
+              title: "Strategise",
+              description:
+                "We define the right roadmap and solution approach for measurable impact.",
+            },
+            {
+              step: "03",
+              title: "Deliver",
+              description:
+                "We implement high-quality solutions aligned with your objectives.",
+            },
+            {
+              step: "04",
+              title: "Optimise",
+              description:
+                "We refine, support, and improve to sustain long-term value.",
+            },
           ],
         },
         why: {
@@ -96,7 +148,7 @@ export default function EskStrategicHomepage() {
         footer: "Adding value through strategic excellence",
       },
 
-      //  French 
+      //  French
       fr: {
         brandTag: "Excellence stratégique",
         nav: {
@@ -115,7 +167,8 @@ export default function EskStrategicHomepage() {
         },
         hero: {
           badge: "Créer de la valeur grâce à l'excellence stratégique",
-          title: "Des solutions stratégiques pour la croissance, l'innovation et l'excellence numérique",
+          title:
+            "Des solutions stratégiques pour la croissance, l'innovation et l'excellence numérique",
           body: "Nous aidons les entreprises à se transformer, à s'optimiser et à se développer grâce au conseil stratégique, au développement logiciel sur mesure, aux services IT managés et aux solutions cloud.",
           highlights: [
             "Des solutions métier et technologiques sur mesure",
@@ -126,35 +179,89 @@ export default function EskStrategicHomepage() {
         },
         about: {
           eyebrow: "À propos",
-          title: "Un partenaire de confiance pour la transformation des entreprises",
+          title:
+            "Un partenaire de confiance pour la transformation des entreprises",
           p1: "Chez ESK Strategic Solutions, nous accompagnons les organisations avec des solutions métier et technologiques concrètes et tournées vers l'avenir. Notre approche repose sur une vision stratégique, l'excellence opérationnelle et un engagement constant à aider nos clients à se moderniser, à s'optimiser et à se développer.",
           p2: "Nous pensons que de bonnes solutions ne doivent pas seulement être séduisantes sur le papier mais elles doivent résoudre de vrais problèmes, améliorer les performances et créer une valeur durable.",
           missionTitle: "Mission",
-          mission: "Fournir des solutions innovantes et stratégiques qui créent une valeur durable pour nos clients.",
+          mission:
+            "Fournir des solutions innovantes et stratégiques qui créent une valeur durable pour nos clients.",
           visionTitle: "Vision",
-          vision: "Être un partenaire de confiance en transformation des entreprises et en excellence numérique en Afrique et au-delà.",
+          vision:
+            "Être un partenaire de confiance en transformation des entreprises et en excellence numérique en Afrique et au-delà.",
         },
         services: {
           eyebrow: "Nos services",
           title: "Des solutions conçues pour faire avancer votre entreprise",
-          intro: "Nous combinons conseil stratégique et expertise numérique pour aider les organisations à améliorer leurs opérations, renforcer leurs fondations technologiques et débloquer de nouvelles opportunités de croissance.",
+          intro:
+            "Nous combinons conseil stratégique et expertise numérique pour aider les organisations à améliorer leurs opérations, renforcer leurs fondations technologiques et débloquer de nouvelles opportunités de croissance.",
           items: [
-            { title: "Conseil stratégique et opérationnel", description: "Stratégie digitale, optimisation de l'entreprise, planification de l'innovation et conseil sur mesure pour aider les organisations à croître et à rester compétitives.", icon: "◈" },
-            { title: "Développement logiciel sur mesure", description: "Applications web et mobiles conçues sur mesure pour résoudre des problèmes métier, améliorer les processus et enrichir l'expérience client.", icon: "⌘" },
-            { title: "Services IT managés", description: "Support d'infrastructure fiable, services numériques managés, accompagnement achats et assistance opérationnelle continue.", icon: "▣" },
-            { title: "Automatisation et optimisation", description: "Automatisation des processus, amélioration des flux de travail et optimisation des performances pour réduire les inefficacités et accroître la valeur.", icon: "↗" },
-            { title: "Stratégie cloud", description: "Migration cloud, planification d'infrastructure, bonnes pratiques de sécurité et optimisation des coûts pour une croissance numérique évolutive.", icon: "☁" },
-            { title: "Solutions d'infrastructure IT", description: "Des bases technologiques solides grâce à la conception d'infrastructure, au support système et à des environnements numériques managés.", icon: "⬡" },
+            {
+              title: "Conseil stratégique et opérationnel",
+              description:
+                "Stratégie digitale, optimisation de l'entreprise, planification de l'innovation et conseil sur mesure pour aider les organisations à croître et à rester compétitives.",
+              icon: "◈",
+            },
+            {
+              title: "Développement logiciel sur mesure",
+              description:
+                "Applications web et mobiles conçues sur mesure pour résoudre des problèmes métier, améliorer les processus et enrichir l'expérience client.",
+              icon: "⌘",
+            },
+            {
+              title: "Services IT managés",
+              description:
+                "Support d'infrastructure fiable, services numériques managés, accompagnement achats et assistance opérationnelle continue.",
+              icon: "▣",
+            },
+            {
+              title: "Automatisation et optimisation",
+              description:
+                "Automatisation des processus, amélioration des flux de travail et optimisation des performances pour réduire les inefficacités et accroître la valeur.",
+              icon: "↗",
+            },
+            {
+              title: "Stratégie cloud",
+              description:
+                "Migration cloud, planification d'infrastructure, bonnes pratiques de sécurité et optimisation des coûts pour une croissance numérique évolutive.",
+              icon: "☁",
+            },
+            {
+              title: "Solutions d'infrastructure IT",
+              description:
+                "Des bases technologiques solides grâce à la conception d'infrastructure, au support système et à des environnements numériques managés.",
+              icon: "⬡",
+            },
           ],
         },
         process: {
           eyebrow: "Notre processus",
           title: "Comment nous travaillons avec nos clients",
           items: [
-            { step: "01", title: "Découvrir", description: "Nous prenons connaissance de votre activité, de vos objectifs, de vos défis et de vos opportunités." },
-            { step: "02", title: "Structurer", description: "Nous définissons la bonne feuille de route et l'approche la plus adaptée pour générer un impact mesurable." },
-            { step: "03", title: "Déployer", description: "Nous mettons en œuvre des solutions de qualité, alignées sur vos objectifs." },
-            { step: "04", title: "Optimiser", description: "Nous affinons, accompagnons et améliorons durablement la valeur créée." },
+            {
+              step: "01",
+              title: "Découvrir",
+              description:
+                "Nous prenons connaissance de votre activité, de vos objectifs, de vos défis et de vos opportunités.",
+            },
+            {
+              step: "02",
+              title: "Structurer",
+              description:
+                "Nous définissons la bonne feuille de route et l'approche la plus adaptée pour générer un impact mesurable.",
+            },
+            {
+              step: "03",
+              title: "Déployer",
+              description:
+                "Nous mettons en œuvre des solutions de qualité, alignées sur vos objectifs.",
+            },
+            {
+              step: "04",
+              title: "Optimiser",
+              description:
+                "Nous affinons, accompagnons et améliorons durablement la valeur créée.",
+            },
           ],
         },
         why: {
@@ -164,7 +271,8 @@ export default function EskStrategicHomepage() {
         },
         contact: {
           eyebrow: "Contact",
-          title: "Discutons de la manière dont nous pouvons accompagner votre entreprise",
+          title:
+            "Discutons de la manière dont nous pouvons accompagner votre entreprise",
           body: "Que vous ayez besoin de conseil stratégique, de support technologique ou d'une solution numérique sur mesure, nous serions ravis d'échanger avec vous pour voir comment ESK Strategic Solutions peut vous aider.",
           email: "E-mail",
           phone: "Téléphone",
@@ -180,31 +288,43 @@ export default function EskStrategicHomepage() {
         footer: "Créer de la valeur grâce à l'excellence stratégique",
       },
     }),
-    []
+    [],
   );
 
-  //  Active translation shortcut 
+  //  Active translation shortcut
   const t = copy[language];
 
-  // Render 
+  // Render
   return (
     <div className={styles.page}>
-
       {/* Header */}
       <header className={styles.header}>
         <div className={styles.headerInner}>
-
-      <div className={styles.logo}>
-  <img src={logo} alt="ESK Strategic Solutions" className={styles.logoImg} />
-</div>
+          <div className={styles.logo}>
+            <img
+              src={logo}
+              alt="ESK Strategic Solutions"
+              className={styles.logoImg}
+            />
+          </div>
 
           {/* Desktop Nav */}
           <nav className={styles.nav}>
-            <a href="#home" className={styles.navLink}>{t.nav.home}</a>
-            <a href="#about" className={styles.navLink}>{t.nav.about}</a>
-            <a href="#services" className={styles.navLink}>{t.nav.services}</a>
-            <a href="#process" className={styles.navLink}>{t.nav.process}</a>
-            <a href="#contact" className={styles.navLink}>{t.nav.contact}</a>
+            <a href="#home" className={styles.navLink}>
+              {t.nav.home}
+            </a>
+            <a href="#about" className={styles.navLink}>
+              {t.nav.about}
+            </a>
+            <a href="#services" className={styles.navLink}>
+              {t.nav.services}
+            </a>
+            <a href="#process" className={styles.navLink}>
+              {t.nav.process}
+            </a>
+            <a href="#contact" className={styles.navLink}>
+              {t.nav.contact}
+            </a>
           </nav>
 
           {/* Language Toggle + CTA */}
@@ -223,14 +343,14 @@ export default function EskStrategicHomepage() {
                 FR
               </button>
             </div>
-            <a href="#contact" className={styles.btnPrimary}>{t.cta.quote}</a>
+            <a href="#contact" className={styles.btnPrimary}>
+              {t.cta.quote}
+            </a>
           </div>
-
         </div>
       </header>
 
       <main>
-
         {/*  Hero Section */}
         <section id="home" className={styles.hero}>
           <div className={styles.heroBg} />
@@ -240,8 +360,12 @@ export default function EskStrategicHomepage() {
               <h1 className={styles.heroTitle}>{t.hero.title}</h1>
               <p className={styles.heroBody}>{t.hero.body}</p>
               <div className={styles.heroBtns}>
-                <a href="#services" className={styles.btnPrimary}>{t.cta.explore}</a>
-                <a href="#contact" className={styles.btnOutline}>{t.cta.contact}</a>
+                <a href="#services" className={styles.btnPrimary}>
+                  {t.cta.explore}
+                </a>
+                <a href="#contact" className={styles.btnOutline}>
+                  {t.cta.contact}
+                </a>
               </div>
               <div className={styles.highlightsGrid}>
                 {t.hero.highlights.map((item) => (
@@ -320,14 +444,15 @@ export default function EskStrategicHomepage() {
               <h2 className={styles.sectionTitle}>{t.why.title}</h2>
               <p className={styles.sectionBody}>{t.why.body}</p>
             </div>
-            <a href="#contact" className={styles.btnPrimary}>{t.cta.start}</a>
+            <a href="#contact" className={styles.btnPrimary}>
+              {t.cta.start}
+            </a>
           </div>
         </section>
 
         {/* Contact Section */}
         <section id="contact" className={styles.contact}>
           <div className={styles.contactGrid}>
-
             {/* Contact Info */}
             <div>
               <p className={styles.eyebrow}>{t.contact.eyebrow}</p>
@@ -344,7 +469,9 @@ export default function EskStrategicHomepage() {
                 </div>
                 <div className={styles.contactCard}>
                   <p className={styles.contactLabel}>{t.contact.location}</p>
-                  <p className={styles.contactValue}>{t.contact.locationValue}</p>
+                  <p className={styles.contactValue}>
+                    {t.contact.locationValue}
+                  </p>
                 </div>
                 <div className={styles.contactCard}>
                   <p className={styles.contactLabel}>{t.contact.reg}</p>
@@ -358,18 +485,32 @@ export default function EskStrategicHomepage() {
               <div className={styles.formInner}>
                 <h3 className={styles.formTitle}>{t.contact.formTitle}</h3>
                 <div className={styles.formFields}>
-                  <input type="text" placeholder={t.contact.namePlaceholder} className={styles.formInput} />
-                  <input type="email" placeholder={t.contact.emailPlaceholder} className={styles.formInput} />
-                  <input type="text" placeholder={t.contact.companyPlaceholder} className={styles.formInput} />
-                  <textarea rows={5} placeholder={t.contact.needsPlaceholder} className={styles.formInput} />
+                  <input
+                    type="text"
+                    placeholder={t.contact.namePlaceholder}
+                    className={styles.formInput}
+                  />
+                  <input
+                    type="email"
+                    placeholder={t.contact.emailPlaceholder}
+                    className={styles.formInput}
+                  />
+                  <input
+                    type="text"
+                    placeholder={t.contact.companyPlaceholder}
+                    className={styles.formInput}
+                  />
+                  <textarea
+                    rows={5}
+                    placeholder={t.contact.needsPlaceholder}
+                    className={styles.formInput}
+                  />
                   <button className={styles.btnPrimary}>{t.cta.submit}</button>
                 </div>
               </div>
             </div>
-
           </div>
         </section>
-
       </main>
 
       {/*  Footer  */}
@@ -379,7 +520,6 @@ export default function EskStrategicHomepage() {
           <p>{t.footer}</p>
         </div>
       </footer>
-
     </div>
   );
 }
