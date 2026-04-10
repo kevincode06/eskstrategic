@@ -40,7 +40,7 @@ export default function EskStrategicHomepage() {
           badge: "Adding value through strategic excellence",
           title:
             "Strategic Solutions for Growth, Innovation, and Digital Excellence",
-          body: "We help businesses transform, optimise, and scale through strategic advisory, custom software development, managed IT services, and cloud solutions.",
+          body: "We help businesses from startups to scale-ups build, optimise and scale through strategic advisory, custom software development and cloud solutions.",
           highlights: [
             "Tailored business and technology solutions",
             "Results-driven strategic execution",
