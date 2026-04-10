@@ -157,6 +157,11 @@ export default function EskStrategicHomepage() {
         footer: "Adding value through strategic excellence",
       },
 
+
+
+
+      
+
       //  French
       fr: {
         brandTag: "Excellence stratégique",
@@ -546,3 +551,5 @@ export default function EskStrategicHomepage() {
     </div>
   );
 }
+
+
