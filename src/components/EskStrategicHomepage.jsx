@@ -160,7 +160,7 @@ export default function EskStrategicHomepage() {
 
 
 
-      
+
 
       //  French
       fr: {
@@ -183,7 +183,7 @@ export default function EskStrategicHomepage() {
           badge: "Créer de la valeur grâce à l'excellence stratégique",
           title:
             "Des solutions stratégiques pour la croissance, l'innovation et l'excellence numérique",
-          body: "Nous aidons les entreprises à se transformer, à s'optimiser et à se développer grâce au conseil stratégique, au développement logiciel sur mesure, aux services IT managés et aux solutions cloud.",
+          body: "Nous aidons les entreprises, des startups aux scale-ups, à construire, optimiser et à se développer grâce à des conseils stratégiques, au développement de logiciels sur mesure et à des solutions cloud.",
           highlights: [
             "Des solutions métier et technologiques sur mesure",
             "Une exécution stratégique axée sur les résultats",
