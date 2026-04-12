@@ -2,14 +2,7 @@ import { useMemo, useState } from "react";
 import styles from "../styles/EskStrategicHomepage.module.css";
 import logo from "../assets/logo.png";
 
-import {
-  BarChart2,
-  Code2,
-  Server,
-  Zap,
-  Cloud,
-  Network
-} from "lucide-react";
+import { BarChart2, Code2, Server, Zap, Cloud, Network } from "lucide-react";
 
 export default function EskStrategicHomepage() {
   // Language State
@@ -76,31 +69,26 @@ export default function EskStrategicHomepage() {
               title: "Custom Software Development",
               description:
                 "Tailored web and mobile applications that solve business problems, improve workflows, and enhance customer experiences.",
-             
             },
             {
               title: "Managed IT Services",
               description:
                 "Reliable infrastructure support, managed digital services, procurement guidance, and continuous operational assistance.",
-              
             },
             {
               title: "Automation & Optimisation",
               description:
                 "Process automation, workflow improvement, and performance enhancement to reduce inefficiencies and increase value.",
-              
             },
             {
               title: "Cloud Strategy",
               description:
                 "Cloud migration, infrastructure planning, security best practices, and cost optimisation for scalable digital growth.",
-              
             },
             {
               title: "IT Infrastructure Solutions",
               description:
                 "Strong technology foundations through infrastructure design, system support, and managed digital environments.",
-              
             },
           ],
         },
@@ -156,11 +144,6 @@ export default function EskStrategicHomepage() {
         },
         footer: "Adding value through strategic excellence",
       },
-
-
-
-
-
 
       //  French
       fr: {
@@ -325,13 +308,14 @@ export default function EskStrategicHomepage() {
       {/* Header */}
       <header className={styles.header}>
         <div className={styles.headerInner}>
-          <div className={styles.logo}>
+          {/* Logo - click to go back to top */}
+          <a href="#home" className={styles.logo}>
             <img
               src={logo}
               alt="ESK Strategic Solutions"
               className={styles.logoImg}
             />
-          </div>
+          </a>
 
           {/* Desktop Nav */}
           <nav className={styles.nav}>
@@ -384,7 +368,7 @@ export default function EskStrategicHomepage() {
               <div className={styles.heroBadge}>{t.hero.badge}</div>
               <h1 className={styles.heroTitle}>{t.hero.title}</h1>
               <p className={styles.heroBody}>{t.hero.body}</p>
-              <div className={styles.heroBtns}>
+              <div className={styles.heroBtn}>
                 <a href="#services" className={styles.btnPrimary}>
                   {t.cta.explore}
                 </a>
@@ -426,26 +410,23 @@ export default function EskStrategicHomepage() {
           </div>
         </section>
 
-
         {/* Services Section */}
-<section id="services" className={styles.services}>
-  <div className={styles.servicesIntro}>
-    <p className={styles.eyebrow}>{t.services.eyebrow}</p>
-    <h2 className={styles.sectionTitle}>{t.services.title}</h2>
-    <p className={styles.sectionBody}>{t.services.intro}</p>
-  </div>
-  <div className={styles.servicesGrid}>
-    {t.services.items.map((service, index) => (
-      <div key={service.title} className={styles.serviceCard}>
-        <div className={styles.serviceIcon}>
-          {serviceIcons[index]}
-        </div>
-        <h3 className={styles.serviceTitle}>{service.title}</h3>
-        <p className={styles.serviceDesc}>{service.description}</p>
-      </div>
-    ))}
-  </div>
-</section>
+        <section id="services" className={styles.services}>
+          <div className={styles.servicesIntro}>
+            <p className={styles.eyebrow}>{t.services.eyebrow}</p>
+            <h2 className={styles.sectionTitle}>{t.services.title}</h2>
+            <p className={styles.sectionBody}>{t.services.intro}</p>
+          </div>
+          <div className={styles.servicesGrid}>
+            {t.services.items.map((service, index) => (
+              <div key={service.title} className={styles.serviceCard}>
+                <div className={styles.serviceIcon}>{serviceIcons[index]}</div>
+                <h3 className={styles.serviceTitle}>{service.title}</h3>
+                <p className={styles.serviceDesc}>{service.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
         {/*  Process Section  */}
         <section id="process" className={styles.process}>
@@ -551,5 +532,3 @@ export default function EskStrategicHomepage() {
     </div>
   );
 }
-
-
