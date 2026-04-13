@@ -24,7 +24,7 @@ export default function EskStrategicHomepage() {
         },
         cta: {
           quote: "Get a Quote",
-          explore: "Explore Services",
+          explore: "Explore Our Services",
           contact: "Contact Us",
           start: "Start a Conversation",
           submit: "Submit Enquiry",
