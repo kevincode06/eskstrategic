@@ -141,7 +141,12 @@ export default function EskStrategicHomepage() {
           companyPlaceholder: "Company",
           needsPlaceholder: "Type your message in here...",
           locationValue: "Johannesburg, South Africa",
+          sending: "Sending...",
+          success:
+            "We have received your message. We will contact you shortly.",
+          error: "Something went wrong. Please try again.",
         },
+
         footer: "Adding value through strategic excellence",
       },
 
@@ -157,7 +162,7 @@ export default function EskStrategicHomepage() {
         },
         cta: {
           quote: "Demander un devis",
-          explore: "Découvrir nos services",
+          explore: "Découvrez nos services",
           contact: "Nous contacter",
           start: "Entamer la conversation",
           submit: "Envoyer la demande",
@@ -281,6 +286,10 @@ export default function EskStrategicHomepage() {
           companyPlaceholder: "Entreprise",
           needsPlaceholder: "Tapez votre message ici...",
           locationValue: "Johannesburg, Afrique du Sud",
+          sending: "Envoi en cours...",
+          success:
+            "Nous avons bien reçu votre message. Nous vous contacterons très prochainement.",
+          error: "Une erreur s'est produite. Veuillez réessayer.",
         },
         footer: "Créer de la valeur grâce à l'excellence stratégique",
       },
