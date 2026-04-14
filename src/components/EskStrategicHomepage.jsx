@@ -1,18 +1,16 @@
 import { useMemo, useState } from "react";
 import styles from "../styles/EskStrategicHomepage.module.css";
 import logo from "../assets/logo.png";
-
 import { BarChart2, Code2, Server, Zap, Cloud, Network } from "lucide-react";
 
 export default function EskStrategicHomepage() {
-  // Language State
-  // "en" = English, "fr" = French
+  // Language State 
   const [language, setLanguage] = useState("en");
 
-  // Translations
+  //  Translations 
   const copy = useMemo(
     () => ({
-      // English
+      //  English 
       en: {
         brandTag: "Strategic Excellence",
         nav: {
@@ -63,7 +61,6 @@ export default function EskStrategicHomepage() {
               title: "Strategic & Operational Consulting",
               description:
                 "Digital strategy, business optimisation, innovation planning, and tailored advisory services to help organisations grow and remain competitive.",
-              icon: "◈",
             },
             {
               title: "Custom Software Development",
@@ -146,11 +143,10 @@ export default function EskStrategicHomepage() {
             "We have received your message. We will contact you shortly.",
           error: "Something went wrong. Please try again.",
         },
-
         footer: "Adding value through strategic excellence",
       },
 
-      //  French
+      // French 
       fr: {
         brandTag: "Excellence stratégique",
         nav: {
@@ -202,37 +198,31 @@ export default function EskStrategicHomepage() {
               title: "Conseil stratégique et opérationnel",
               description:
                 "Stratégie digitale, optimisation de l'entreprise, planification de l'innovation et conseil sur mesure pour aider les organisations à croître et à rester compétitives.",
-              icon: "◈",
             },
             {
               title: "Développement logiciel sur mesure",
               description:
                 "Applications web et mobiles conçues sur mesure pour résoudre des problèmes métier, améliorer les processus et enrichir l'expérience client.",
-              icon: "⌘",
             },
             {
               title: "Services IT managés",
               description:
                 "Support d'infrastructure fiable, services numériques managés, accompagnement achats et assistance opérationnelle continue.",
-              icon: "▣",
             },
             {
               title: "Automatisation et optimisation",
               description:
                 "Automatisation des processus, amélioration des flux de travail et optimisation des performances pour réduire les inefficacités et accroître la valeur.",
-              icon: "↗",
             },
             {
               title: "Stratégie cloud",
               description:
                 "Migration cloud, planification d'infrastructure, bonnes pratiques de sécurité et optimisation des coûts pour une croissance numérique évolutive.",
-              icon: "☁",
             },
             {
               title: "Solutions d'infrastructure IT",
               description:
                 "Des bases technologiques solides grâce à la conception d'infrastructure, au support système et à des environnements numériques managés.",
-              icon: "⬡",
             },
           ],
         },
@@ -297,11 +287,10 @@ export default function EskStrategicHomepage() {
     [],
   );
 
-  //  Active translation shortcut
+  // Active translation shortcut 
   const t = copy[language];
 
-  // ─── Service Icons ─────────────────────────────────────────────────────────
-  // *** THIS IS WHERE serviceIcons GOES — after t, before return ***
+  //  Service Icons
   const serviceIcons = [
     <BarChart2 size={32} />,
     <Code2 size={32} />,
@@ -311,10 +300,57 @@ export default function EskStrategicHomepage() {
     <Network size={32} />,
   ];
 
-  // Render
+  //  Form State 
+  // *** ADDED HERE — after serviceIcons, before return ***
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    message: "",
+  });
+  const [formStatus, setFormStatus] = useState("idle");
+  // idle | sending | success | error
+
+  // Form Handlers 
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async () => {
+    // Validation
+    if (!formData.name || !formData.email || !formData.message) return;
+
+    setFormStatus("sending");
+
+    try {
+      const response = await fetch("http://localhost:5000/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        // Show success message
+        setFormStatus("success");
+        // Clear form
+        setFormData({ name: "", email: "", company: "", message: "" });
+        // Redirect after 20 seconds
+        setTimeout(() => {
+          setFormStatus("idle");
+          window.location.href = "#contact";
+        }, 20000);
+      } else {
+        setFormStatus("error");
+      }
+    } catch (error) {
+      setFormStatus("error");
+    }
+  };
+
+  // Render 
   return (
     <div className={styles.page}>
-      {/* Header */}
+      {/*  Header  */}
       <header className={styles.header}>
         <div className={styles.headerInner}>
           {/* Logo - click to go back to top */}
@@ -397,7 +433,7 @@ export default function EskStrategicHomepage() {
           </div>
         </section>
 
-        {/* About Section */}
+        {/*  About Section  */}
         <section id="about" className={styles.about}>
           <div className={styles.aboutGrid}>
             <div className={styles.aboutText}>
@@ -419,7 +455,7 @@ export default function EskStrategicHomepage() {
           </div>
         </section>
 
-        {/* Services Section */}
+        {/*  Services Section  */}
         <section id="services" className={styles.services}>
           <div className={styles.servicesIntro}>
             <p className={styles.eyebrow}>{t.services.eyebrow}</p>
@@ -454,7 +490,7 @@ export default function EskStrategicHomepage() {
           </div>
         </section>
 
-        {/*  Why ESK Section  */}
+        {/* Why ESK Section */}
         <section className={styles.whySection}>
           <div className={styles.whyBox}>
             <div className={styles.whyContent}>
@@ -468,7 +504,7 @@ export default function EskStrategicHomepage() {
           </div>
         </section>
 
-        {/* Contact Section */}
+        {/*  Contact Section  */}
         <section id="contact" className={styles.contact}>
           <div className={styles.contactGrid}>
             {/* Contact Info */}
@@ -502,29 +538,71 @@ export default function EskStrategicHomepage() {
             <div className={styles.formOuter}>
               <div className={styles.formInner}>
                 <h3 className={styles.formTitle}>{t.contact.formTitle}</h3>
-                <div className={styles.formFields}>
-                  <input
-                    type="text"
-                    placeholder={t.contact.namePlaceholder}
-                    className={styles.formInput}
-                  />
-                  <input
-                    type="email"
-                    placeholder={t.contact.emailPlaceholder}
-                    className={styles.formInput}
-                  />
-                  <input
-                    type="text"
-                    placeholder={t.contact.companyPlaceholder}
-                    className={styles.formInput}
-                  />
-                  <textarea
-                    rows={5}
-                    placeholder={t.contact.needsPlaceholder}
-                    className={styles.formInput}
-                  />
-                  <button className={styles.btnPrimary}>{t.cta.submit}</button>
-                </div>
+
+                {/* Success Message*/}
+                {formStatus === "success" ? (
+                  <div className={styles.formSuccess}>
+                    <div className={styles.formSuccessIcon}>✓</div>
+                    <p className={styles.formSuccessText}>
+                      {t.contact.success}
+                    </p>
+                    <p className={styles.formSuccessTimer}>
+                      Redirecting in 20 seconds...
+                    </p>
+                  </div>
+                ) : (
+                  /*  Form Fields  */
+                  <div className={styles.formFields}>
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder={t.contact.namePlaceholder}
+                      className={styles.formInput}
+                      value={formData.name}
+                      onChange={handleChange}
+                    />
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder={t.contact.emailPlaceholder}
+                      className={styles.formInput}
+                      value={formData.email}
+                      onChange={handleChange}
+                    />
+                    <input
+                      type="text"
+                      name="company"
+                      placeholder={t.contact.companyPlaceholder}
+                      className={styles.formInput}
+                      value={formData.company}
+                      onChange={handleChange}
+                    />
+                    <textarea
+                      rows={5}
+                      name="message"
+                      placeholder={t.contact.needsPlaceholder}
+                      className={styles.formInput}
+                      value={formData.message}
+                      onChange={handleChange}
+                    />
+
+                    {/* Error message */}
+                    {formStatus === "error" && (
+                      <p className={styles.formError}>{t.contact.error}</p>
+                    )}
+
+                    {/* Submit button */}
+                    <button
+                      className={styles.btnPrimary}
+                      onClick={handleSubmit}
+                      disabled={formStatus === "sending"}
+                    >
+                      {formStatus === "sending"
+                        ? t.contact.sending
+                        : t.cta.submit}
+                    </button>
+                  </div>
+                )}
               </div>
             </div>
           </div>
