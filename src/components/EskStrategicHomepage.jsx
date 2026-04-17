@@ -142,7 +142,7 @@ export default function EskStrategicHomepage() {
           success:
             "We have received your message. We will contact you shortly.",
           error: "Something went wrong. Please try again.",
-          validation: "Please fill in all required fields.",
+          validation: "Please fill in the enquiry form before submitting",
         },
         footer: "Adding value through strategic excellence",
       },
@@ -281,7 +281,7 @@ export default function EskStrategicHomepage() {
           success:
             "Nous avons bien reçu votre message. Nous vous contacterons très prochainement.",
           error: "Une erreur s'est produite. Veuillez réessayer.",
-          validation: "Veuillez remplir tous les champs obligatoires.",
+          validation: "Veuillez remplir le formulaire avant de soumettre`.",
         },
         footer: "Créer de la valeur grâce à l'excellence stratégique",
       },
@@ -544,8 +544,10 @@ export default function EskStrategicHomepage() {
             {/* Contact Form */}
             <div className={styles.formOuter}>
               <div className={styles.formInner}>
-                {/* Title always shows */}
-                <h3 className={styles.formTitle}>{t.contact.formTitle}</h3>
+                {/* Hide title on success */}
+                {formStatus !== "success" && (
+                  <h3 className={styles.formTitle}>{t.contact.formTitle}</h3>
+                )}
 
                 {/* Success Message */}
                 {formStatus === "success" ? (
