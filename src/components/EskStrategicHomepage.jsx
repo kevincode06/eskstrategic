@@ -337,11 +337,11 @@ export default function EskStrategicHomepage() {
         setFormStatus("success");
         // Clear form
         setFormData({ name: "", email: "", company: "", message: "" });
-        // Redirect after 20 seconds
+        // Redirect after 15 seconds
         setTimeout(() => {
           setFormStatus("idle");
           window.location.href = "#contact";
-        }, 20000);
+        }, 15000);
       } else {
         setFormStatus("error");
       }
