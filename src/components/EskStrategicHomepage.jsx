@@ -4,13 +4,13 @@ import logo from "../assets/logo.png";
 import { BarChart2, Code2, Server, Zap, Cloud, Network } from "lucide-react";
 
 export default function EskStrategicHomepage() {
-  // Language State 
+  // Language State
   const [language, setLanguage] = useState("en");
 
-  //  Translations 
+  //  Translations
   const copy = useMemo(
     () => ({
-      //  English 
+      //  English
       en: {
         brandTag: "Strategic Excellence",
         nav: {
@@ -146,7 +146,7 @@ export default function EskStrategicHomepage() {
         footer: "Adding value through strategic excellence",
       },
 
-      // French 
+      // French
       fr: {
         brandTag: "Excellence stratégique",
         nav: {
@@ -287,7 +287,7 @@ export default function EskStrategicHomepage() {
     [],
   );
 
-  // Active translation shortcut 
+  // Active translation shortcut
   const t = copy[language];
 
   //  Service Icons
@@ -300,7 +300,7 @@ export default function EskStrategicHomepage() {
     <Network size={32} />,
   ];
 
-  //  Form State 
+  //  Form State
 
   const [formData, setFormData] = useState({
     name: "",
@@ -311,7 +311,7 @@ export default function EskStrategicHomepage() {
   const [formStatus, setFormStatus] = useState("idle");
   // idle | sending | success | error
 
-  // Form Handlers 
+  // Form Handlers
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -323,11 +323,14 @@ export default function EskStrategicHomepage() {
     setFormStatus("sending");
 
     try {
-      const response = await fetch("https://eskstrategic.onrender.com", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://eskstrategic-backend.onrender.com/send",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        },
+      );
 
       if (response.ok) {
         // Show success message
@@ -347,7 +350,7 @@ export default function EskStrategicHomepage() {
     }
   };
 
-  // Render 
+  // Render
   return (
     <div className={styles.page}>
       {/*  Header  */}
