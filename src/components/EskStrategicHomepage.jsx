@@ -370,10 +370,7 @@ export default function EskStrategicHomepage() {
           </a>
 
           {/* Desktop Nav */}
-          <nav
-            className={`${styles.nav} ${menuOpen ? styles.navOpen : ""}`}
-          ></nav>
-          <nav className={styles.nav}>
+          <nav className={`${styles.nav} ${menuOpen ? styles.navOpen : ""}`}>
             <a href="#home" className={styles.navLink}>
               {t.nav.home}
             </a>
