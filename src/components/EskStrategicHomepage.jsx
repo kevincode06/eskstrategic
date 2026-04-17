@@ -371,19 +371,39 @@ export default function EskStrategicHomepage() {
 
           {/* Desktop Nav */}
           <nav className={`${styles.nav} ${menuOpen ? styles.navOpen : ""}`}>
-            <a href="#home" className={styles.navLink}>
+            <a
+              href="#home"
+              className={styles.navLink}
+              onClick={() => setMenuOpen(false)}
+            >
               {t.nav.home}
             </a>
-            <a href="#about" className={styles.navLink}>
+            <a
+              href="#about"
+              className={styles.navLink}
+              onClick={() => setMenuOpen(false)}
+            >
               {t.nav.about}
             </a>
-            <a href="#services" className={styles.navLink}>
+            <a
+              href="#services"
+              className={styles.navLink}
+              onClick={() => setMenuOpen(false)}
+            >
               {t.nav.services}
             </a>
-            <a href="#process" className={styles.navLink}>
+            <a
+              href="#process"
+              className={styles.navLink}
+              onClick={() => setMenuOpen(false)}
+            >
               {t.nav.process}
             </a>
-            <a href="#contact" className={styles.navLink}>
+            <a
+              href="#contact"
+              className={styles.navLink}
+              onClick={() => setMenuOpen(false)}
+            >
               {t.nav.contact}
             </a>
           </nav>
