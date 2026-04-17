@@ -746,6 +746,15 @@
   border: none;
   cursor: pointer;
 }
+/* Hide hamburger on desktop */
+.menuToggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white; /* 👈 make icon visible */
+}
 
 /* Mobile styles */
 @media (max-width: 768px) {
@@ -753,15 +762,25 @@
     position: absolute;
     top: 80px;
     right: 0;
-    background: white;
     width: 100%;
+
+    background: #041924; /* 🔥 match your theme */
     flex-direction: column;
     display: none;
     padding: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* 🔥 nice depth */
   }
 
   .navOpen {
     display: flex;
+  }
+
+  .navLink {
+    padding: 12px 0;
+    font-size: 16px;
+    color: white;
   }
 
   .menuToggle {

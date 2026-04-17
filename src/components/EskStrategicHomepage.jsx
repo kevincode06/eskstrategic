@@ -401,16 +401,18 @@ export default function EskStrategicHomepage() {
                 EN
               </button>
               <button
-                className={styles.menuToggle}
-                onClick={() => setMenuOpen(!menuOpen)}
-              >
-                ☰
-              </button>
-              <button
                 onClick={() => setLanguage("fr")}
                 className={`${styles.langBtn} ${language === "fr" ? styles.langBtnActive : ""}`}
               >
                 FR
+              </button>
+
+              {/* Hamburger */}
+              <button
+                className={styles.menuToggle}
+                onClick={() => setMenuOpen(!menuOpen)}
+              >
+                ☰
               </button>
             </div>
             <a href="#contact" className={styles.btnPrimary}>
