@@ -301,7 +301,7 @@ export default function EskStrategicHomepage() {
   ];
 
   //  Form State 
-  // *** ADDED HERE — after serviceIcons, before return ***
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -323,7 +323,7 @@ export default function EskStrategicHomepage() {
     setFormStatus("sending");
 
     try {
-      const response = await fetch("http://localhost:5000/send", {
+      const response = await fetch("https://eskstrategic.onrender.com", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
