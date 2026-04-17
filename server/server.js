@@ -5,8 +5,17 @@ require("dotenv").config();
 
 const app = express();
 app.use(express.json());
-app.use(cors());
 
+app.use(
+  cors({
+    origin: [
+      "https://www.eskstrategic.co.za",
+      "https://eskstrategic.co.za",
+      "http://localhost:3000",
+    ],
+    methods: ["GET", "POST"],
+  }),
+);
 //  Email Transporter
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST,
