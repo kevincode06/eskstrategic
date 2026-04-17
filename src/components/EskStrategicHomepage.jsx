@@ -142,6 +142,8 @@ export default function EskStrategicHomepage() {
           success:
             "We have received your message. We will contact you shortly.",
           error: "Something went wrong. Please try again.",
+          validation:
+            "Please fill in all required fields (Name, Email and Message).",
         },
         footer: "Adding value through strategic excellence",
       },
@@ -280,6 +282,8 @@ export default function EskStrategicHomepage() {
           success:
             "Nous avons bien reçu votre message. Nous vous contacterons très prochainement.",
           error: "Une erreur s'est produite. Veuillez réessayer.",
+          validation:
+            "Veuillez remplir tous les champs obligatoires (Nom, E-mail et Message).",
         },
         footer: "Créer de la valeur grâce à l'excellence stratégique",
       },
