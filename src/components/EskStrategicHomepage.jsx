@@ -315,10 +315,12 @@ export default function EskStrategicHomepage() {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
   const handleSubmit = async () => {
-    // Validation
-    if (!formData.name || !formData.email || !formData.message) return;
+    // Show validation message if required fields are empty
+    if (!formData.name || !formData.email || !formData.message) {
+      setFormStatus("validation");
+      return;
+    }
 
     setFormStatus("sending");
 
@@ -540,9 +542,10 @@ export default function EskStrategicHomepage() {
             {/* Contact Form */}
             <div className={styles.formOuter}>
               <div className={styles.formInner}>
+                {/* Title always shows */}
                 <h3 className={styles.formTitle}>{t.contact.formTitle}</h3>
 
-                {/* Success Message*/}
+                {/* Success Message */}
                 {formStatus === "success" ? (
                   <div className={styles.formSuccess}>
                     <div className={styles.formSuccessIcon}>✓</div>
@@ -550,11 +553,11 @@ export default function EskStrategicHomepage() {
                       {t.contact.success}
                     </p>
                     <p className={styles.formSuccessTimer}>
-                      Redirecting in 20 seconds...
+                      Redirecting in 15 seconds...
                     </p>
                   </div>
                 ) : (
-                  /*  Form Fields  */
+                  /* Form Fields */
                   <div className={styles.formFields}>
                     <input
                       type="text"
@@ -588,6 +591,13 @@ export default function EskStrategicHomepage() {
                       value={formData.message}
                       onChange={handleChange}
                     />
+
+                    {/* Validation message */}
+                    {formStatus === "validation" && (
+                      <p className={styles.formValidation}>
+                        {t.contact.validation}
+                      </p>
+                    )}
 
                     {/* Error message */}
                     {formStatus === "error" && (

@@ -725,3 +725,15 @@
     line-height: 1.25;
   }
 }
+
+/*  Form Validation  */
+.formValidation {
+  font-size: 14px;
+  color: #f3d98b;
+  text-align: center;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(243, 217, 139, 0.3);
+  background-color: rgba(243, 217, 139, 0.08);
+  margin: 0;
+}
