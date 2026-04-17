@@ -406,15 +406,15 @@ export default function EskStrategicHomepage() {
               >
                 FR
               </button>
-
-              {/* Hamburger */}
-              <button
-                className={styles.menuToggle}
-                onClick={() => setMenuOpen(!menuOpen)}
-              >
-                ☰
-              </button>
             </div>
+
+            {/* Hamburger */}
+            <button
+              className={styles.menuToggle}
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              ☰
+            </button>
             <a href="#contact" className={styles.btnPrimary}>
               {t.cta.quote}
             </a>
