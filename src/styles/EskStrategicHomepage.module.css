@@ -727,9 +727,10 @@
 }
 
 .formValidation {
-  color: #f3d98b;
+  color: white;
   font-size: 14px;
   margin: 0;
+  text-align: center;
   padding: 12px 16px;
   border-radius: 12px;
   background-color: rgba(243, 217, 139, 0.1);
