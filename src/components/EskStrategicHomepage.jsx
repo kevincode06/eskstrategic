@@ -6,7 +6,7 @@ import { BarChart2, Code2, Server, Zap, Cloud, Network } from "lucide-react";
 export default function EskStrategicHomepage() {
   // Language State
   const [language, setLanguage] = useState("en");
-
+  const [menuOpen, setMenuOpen] = useState(false);
   //  Translations
   const copy = useMemo(
     () => ({
@@ -370,6 +370,9 @@ export default function EskStrategicHomepage() {
           </a>
 
           {/* Desktop Nav */}
+          <nav
+            className={`${styles.nav} ${menuOpen ? styles.navOpen : ""}`}
+          ></nav>
           <nav className={styles.nav}>
             <a href="#home" className={styles.navLink}>
               {t.nav.home}
@@ -396,6 +399,12 @@ export default function EskStrategicHomepage() {
                 className={`${styles.langBtn} ${language === "en" ? styles.langBtnActive : ""}`}
               >
                 EN
+              </button>
+              <button
+                className={styles.menuToggle}
+                onClick={() => setMenuOpen(!menuOpen)}
+              >
+                ☰
               </button>
               <button
                 onClick={() => setLanguage("fr")}

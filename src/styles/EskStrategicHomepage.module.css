@@ -129,6 +129,8 @@
   border: none;
   cursor: pointer;
   font-family: inherit;
+  min-width: 140px;
+  text-align: center;
 }
 
 .btnPrimary:hover {
@@ -735,4 +737,34 @@
   border-radius: 12px;
   background-color: rgba(243, 217, 139, 0.1);
   border: 1px solid rgba(243, 217, 139, 0.3);
+}
+/* Hide hamburger on desktop */
+.menuToggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .nav {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background: white;
+    width: 100%;
+    flex-direction: column;
+    display: none;
+    padding: 20px;
+  }
+
+  .navOpen {
+    display: flex;
+  }
+
+  .menuToggle {
+    display: block;
+  }
 }
