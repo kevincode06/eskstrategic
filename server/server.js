@@ -1,6 +1,6 @@
 const express = require("express");
-const nodemailer = require("nodemailer");
 const cors = require("cors");
+const { Resend } = require("resend");
 require("dotenv").config();
 
 const app = express();
@@ -16,21 +16,10 @@ app.use(
     methods: ["GET", "POST"],
   }),
 );
-//  Email Transporter
-const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST,
-  port: Number(process.env.SMTP_PORT),
-  secure: false, // false for 587, true for 465
-  auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS,
-  },
-  tls: {
-    rejectUnauthorized: false, // needed for some hosting providers
-  },
-});
 
-//  Test route
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+// Test route
 app.get("/", (req, res) => {
   res.json({ message: "ESK server is running" });
 });
@@ -39,15 +28,14 @@ app.get("/", (req, res) => {
 app.post("/send", async (req, res) => {
   const { name, email, company, message } = req.body;
 
-  // Validation
   if (!name || !email || !message) {
     return res.status(400).json({ error: "Missing required fields" });
   }
 
   try {
-    await transporter.sendMail({
-      from: `"ESK Website" <${process.env.SMTP_USER}>`,
-      to: process.env.SMTP_USER,
+    await resend.emails.send({
+      from: "ESK Website <onboarding@resend.dev>", // change after verifying your domain
+      to: "info@eskstrategic.co.za",
       replyTo: email,
       subject: `New Enquiry from ${name}`,
       html: `
@@ -72,7 +60,6 @@ app.post("/send", async (req, res) => {
   }
 });
 
-//  Start Server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
